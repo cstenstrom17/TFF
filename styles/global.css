@@ -1,0 +1,156 @@
+:root {
+  --cream: #fffdf8;
+  --sand: #f4eee3;
+  --navy: #17324d;
+  --navy-soft: #294a68;
+  --terracotta: #b94d38;
+  --terracotta-dark: #963a2a;
+  --gold: #e7b94b;
+  --sage: #9aaf9b;
+  --sage-dark: #58735d;
+  --sage-pale: #e8efe7;
+  --ink: #1c2833;
+  --muted: #68747f;
+  --muted-light: #9aa3aa;
+  --line: rgba(23, 50, 77, 0.12);
+  --font-body: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Arial Narrow', 'Avenir Next Condensed', system-ui, sans-serif;
+  --radius-sm: 0.9rem;
+  --radius-md: 1.35rem;
+  --radius-lg: 2rem;
+  --shadow-soft: 0 18px 50px rgba(23, 50, 77, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--navy);
+  font-family: var(--font-display);
+  letter-spacing: -0.035em;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(231, 185, 75, 0.7);
+  outline-offset: 3px;
+}
+
+.container {
+  width: min(1180px, calc(100% - 2.5rem));
+  margin-inline: auto;
+}
+
+.section {
+  padding: clamp(5rem, 9vw, 8.5rem) 0;
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  color: var(--terracotta);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.buttonRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 3.15rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.35rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: var(--navy);
+  color: #fff;
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  background: var(--navy-soft);
+}
+
+.buttonOutline {
+  border-color: var(--line);
+  background: transparent;
+  color: var(--navy);
+}
+
+.buttonOutline:hover {
+  border-color: rgba(23, 50, 77, 0.28);
+  background: #fff;
+}
+
+.buttonLight {
+  background: #fff;
+  color: var(--navy) !important;
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
