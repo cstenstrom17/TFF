@@ -1,0 +1,22 @@
+.heading {
+  max-width: 44rem;
+  margin-bottom: 2.6rem;
+}
+
+.heading h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.35rem);
+  line-height: 1.06;
+}
+
+.body {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+.center {
+  margin-inline: auto;
+  text-align: center;
+}
